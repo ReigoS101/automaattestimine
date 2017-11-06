@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WeatherTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-11-06T09:28:57" hostname="macbook.local" time="0.571">
+  <properties/>
+  <testcase name="isUrlOfWeatherForecast" classname="WeatherTests" time="0.027"/>
+  <testcase name="isApiResponse200" classname="WeatherTests" time="0.202"/>
+  <testcase name="isResponseOfTodaysWeather" classname="WeatherTests" time="0.104"/>
+  <testcase name="isResponseOfMaxTemperatures" classname="WeatherTests" time="0.077"/>
+  <testcase name="isUrlOfTodaysWeather" classname="WeatherTests" time="0.0"/>
+  <testcase name="isResponseWithCoordinates" classname="WeatherTests" time="0.071"/>
+  <testcase name="isResponseWeatherOfThreeDays" classname="WeatherTests" time="0.073"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

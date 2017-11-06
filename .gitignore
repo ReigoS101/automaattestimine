@@ -1,0 +1,7 @@
+.idea/
+.gradle/
+build/
+gradle/
+out/
+src/main/java/textFiles/input.txt
+src/main/java/textFiles/output.txt
