@@ -1,0 +1,8 @@
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='277.15'
+, threeDayTemp=[{"min_temp":277.79,"max_temp":278.149,"dateUnix":1512788400},{"min_temp":277.79,"max_temp":278.149,"dateUnix":1512788400},{"min_temp":277.79,"max_temp":278.149,"dateUnix":1512788400}]
+}
+ 

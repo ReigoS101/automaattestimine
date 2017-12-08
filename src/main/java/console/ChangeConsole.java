@@ -11,7 +11,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class ChangeConsole {
-    public static String fileName = "/Users/macbook/IdeaProjects/AutomaatTestimine/src/main/java/textFiles/input.txt";
+    public static String fileName = "/Users/macbook/Desktop/automaat/src/main/java/textFiles/input.txt";
 
     public static int changeConsole(String cityName, String countryCode) throws IOException {
         List<String> fromInput = new ArrayList<>();

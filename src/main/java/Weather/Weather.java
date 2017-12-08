@@ -1,3 +1,5 @@
+package Weather;
+
 import java.io.IOException;
 import java.net.URL;
 import okhttp3.OkHttpClient;
@@ -17,22 +19,22 @@ public class Weather {
                 .scheme("http")
                 .host("api.openweathermap.org")
                 .addPathSegments("/data/2.5/weather")
-                .addQueryParameter("q", countryCode+","+cityName)
+                .addQueryParameter("q", cityName+","+countryCode)
                 .addQueryParameter("APPID", webAPIKeyIs)
                 .build().url();
         return currentWeather;
     }
 
     public URL makeWeatherForecastRequestUrl(Integer foreCastLengthInDays, String countryCode, String cityName, String webAPIKeyIs) {
-        URL weatherForecast = new HttpUrl.Builder()
+        URL weatherForeCast = new HttpUrl.Builder()
                 .scheme("http")
                 .host("api.openweathermap.org")
                 .addPathSegments("/data/2.5/forecast")
-                .addQueryParameter("q", countryCode+","+cityName)
+                .addQueryParameter("q", cityName+","+countryCode)
                 .addQueryParameter("APPID", webAPIKeyIs)
                 .addQueryParameter("cnt", String.valueOf(foreCastLengthInDays))
                 .build().url();
-        return weatherForecast;
+        return weatherForeCast;
     }
 
 
@@ -104,7 +106,5 @@ public class Weather {
         }
         return maxTemperatures;
     }
-
-
 
 }
