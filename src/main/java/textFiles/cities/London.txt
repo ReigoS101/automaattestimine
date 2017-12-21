@@ -6,3 +6,115 @@ cityName='London'
 , threeDayTemp=[{"min_temp":273.7,"max_temp":274.049,"dateUnix":1512788400},{"min_temp":273.7,"max_temp":274.049,"dateUnix":1512788400},{"min_temp":273.7,"max_temp":274.049,"dateUnix":1512788400}]
 }
  
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='274.45'
+, threeDayTemp=[{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='274.45'
+, threeDayTemp=[{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='274.45'
+, threeDayTemp=[{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='274.45'
+, threeDayTemp=[{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":276.85,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='274.44'
+, threeDayTemp=[{"min_temp":276.484,"max_temp":277.61,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":277.61,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":277.61,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='274.44'
+, threeDayTemp=[{"min_temp":276.484,"max_temp":277.61,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":277.61,"dateUnix":1513447200},{"min_temp":276.484,"max_temp":277.61,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='276.68'
+, threeDayTemp=[{"min_temp":274.642,"max_temp":275.66,"dateUnix":1513458000},{"min_temp":274.642,"max_temp":275.66,"dateUnix":1513458000},{"min_temp":274.642,"max_temp":275.66,"dateUnix":1513458000}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='276.02'
+, threeDayTemp=[{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='276.02'
+, threeDayTemp=[{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='276.02'
+, threeDayTemp=[{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='276.02'
+, threeDayTemp=[{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='276.02'
+, threeDayTemp=[{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='276.02'
+, threeDayTemp=[{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600},{"min_temp":280.411,"max_temp":283.07,"dateUnix":1513533600}]
+}
+ 
+WeatherReport{ 
+cityName='London'
+, countryCode='UK'
+, geoCoordinates={"lon":-0.13,"lat":51.51}
+, currentTemp='277.97'
+, threeDayTemp=[{"min_temp":281.832,"max_temp":282.32,"dateUnix":1513544400},{"min_temp":281.832,"max_temp":282.32,"dateUnix":1513544400},{"min_temp":281.832,"max_temp":282.32,"dateUnix":1513544400}]
+}
+ 

@@ -14,13 +14,14 @@ public class fileReaderWriterTests {
     @Test
     public void doesWriterWriteToFile() {
         String fileName = "/Users/macbook/Desktop/automaat/src/main/java/textFiles/fileWriterReaderOutput.txt";
+        fileReaderWriter writer = new fileReaderWriter();
         File file = new File(fileName);
         try {
             file.createNewFile();
-            fileReaderWriter.addStringToFile("1", fileName);
-            JSONArray lines = fileReaderWriter.readAllLines(fileName);
-            assertEquals("1", lines.getString(0));
+            writer.addStringToFile("1", fileName);
+            JSONArray lines = writer.readAllLines(fileName);
             file.delete();
+            assertEquals("1", lines.getString(0));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -30,13 +31,14 @@ public class fileReaderWriterTests {
     @Test
     public void canReaderReadInputFilesSyntax() {
         String fileName = "/Users/macbook/Desktop/automaat/src/main/java/textFiles/inputTest.txt";
+        fileReaderWriter writer = new fileReaderWriter();
         File file = new File(fileName);
         try {
             file.createNewFile();
-            fileReaderWriter.addStringToFile("1, 1, 1", fileName);
+            writer.addStringToFile("1, 1, 1", fileName);
             List list = fileReaderWriter.readLinesSpecific(fileName);
-            assertEquals(list.size(), 3);
             file.delete();
+            assertEquals(list.size(), 3);
         } catch (IOException e) {
             e.printStackTrace();
         }

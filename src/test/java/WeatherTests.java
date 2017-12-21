@@ -1,7 +1,10 @@
 import Weather.Weather;
+import fileReaderWriter.fileReaderWriter;
+import model.WeatherRequest;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.json.*;
+import model.WeatherReport;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.junit.Assert.assertEquals;
@@ -25,9 +28,10 @@ public class WeatherTests {
 
     public static Config config;
     public static String fileName;
-    public static String webAPIKeyIs = "f73ff221d406e52eeaa36e28d0e94ecc";
     public static Weather newWeather;
-    public static int mock = 2;
+    public static int mock = 1;
+    public static fileReaderWriter writer;
+
 
     public static void writeLinestoFile(String input) throws IOException {
         Files.write(Paths.get(fileName), input.getBytes(), StandardOpenOption.APPEND);
@@ -40,6 +44,7 @@ public class WeatherTests {
         config = new Config();
         if (mock == 1) {
             newWeather = Mockito.mock(Weather.class);
+            writer = Mockito.mock(fileReaderWriter.class);
         }
         else {
             newWeather = new Weather();
@@ -52,11 +57,11 @@ public class WeatherTests {
     @Test(timeout = 10000)
     public void isUrlOfTodaysWeather() throws IOException {
         if (mock == 1) {
-            when(newWeather.makeTodayWeatherRequestUrl(config.getCountyCode(), config.getCityName(), webAPIKeyIs)).thenReturn(new URL("http://api.openweathermap.org/"));
+            when(newWeather.makeTodayWeatherRequestUrl(config.getCountyCode(), config.getCityName(), config.getKey())).thenReturn(new URL("http://api.openweathermap.org/"));
         }
 
-        final URL url = newWeather.makeTodayWeatherRequestUrl(config.getCountyCode(), config.getCityName(), webAPIKeyIs);
-        if (mock == 1) verify(newWeather).makeTodayWeatherRequestUrl(config.getCountyCode(), config.getCityName(), webAPIKeyIs);
+        final URL url = newWeather.makeTodayWeatherRequestUrl(config.getCountyCode(), config.getCityName(), config.getKey());
+        if (mock == 1) verify(newWeather).makeTodayWeatherRequestUrl(config.getCountyCode(), config.getCityName(), config.getKey());
         //int statusCode = responseStatus;
         assertThat(url, instanceOf(URL.class));
 
@@ -65,11 +70,11 @@ public class WeatherTests {
     @Test(timeout = 10000)
     public void isUrlOfWeatherForecast() throws IOException {
         if (mock == 1) {
-            when(newWeather.makeWeatherForecastRequestUrl(forecastLength, config.getCountyCode(), config.getCityName(), webAPIKeyIs)).thenReturn(new URL("http://api.openweathermap.org/"));
+            when(newWeather.makeWeatherForecastRequestUrl(forecastLength, config.getCountyCode(), config.getCityName(), config.getKey())).thenReturn(new URL("http://api.openweathermap.org/"));
         }
 
-        final URL url = newWeather.makeWeatherForecastRequestUrl(forecastLength, config.getCountyCode(), config.getCityName(), webAPIKeyIs);
-        if (mock == 1) verify(newWeather).makeWeatherForecastRequestUrl(forecastLength, config.getCountyCode(), config.getCityName(), webAPIKeyIs);
+        final URL url = newWeather.makeWeatherForecastRequestUrl(forecastLength, config.getCountyCode(), config.getCityName(), config.getKey());
+        if (mock == 1) verify(newWeather).makeWeatherForecastRequestUrl(forecastLength, config.getCountyCode(), config.getCityName(), config.getKey());
 
         //int statusCode = responseStatus;
         writeLinestoFile(url.toString() + "\n");
@@ -80,11 +85,11 @@ public class WeatherTests {
     @Test(timeout = 10000)
     public void isApiResponse200() throws IOException {
         if (mock == 1) {
-            when(newWeather.apiResponseStatus(config.getCountyCode(), config.getCityName(), webAPIKeyIs)).thenReturn(200);
+            when(newWeather.apiResponseStatus(config.getCountyCode(), config.getCityName(), config.getKey())).thenReturn(200);
         }
 
-        final Integer responseStatus = newWeather.apiResponseStatus(config.getCountyCode(), config.getCityName(), webAPIKeyIs);
-        if (mock == 1) verify(newWeather).apiResponseStatus(config.getCountyCode(), config.getCityName(), webAPIKeyIs);
+        final Integer responseStatus = newWeather.apiResponseStatus(config.getCountyCode(), config.getCityName(), config.getKey());
+        if (mock == 1) verify(newWeather).apiResponseStatus(config.getCountyCode(), config.getCityName(), config.getKey());
 
 
         Integer statusCode = responseStatus;
@@ -96,12 +101,12 @@ public class WeatherTests {
     @Test(timeout = 10000)
     public void isResponseOfTodaysWeather() throws IOException, JSONException {
         if (mock == 1) {
-            when(newWeather.getTodayCurrentWeather(config.getCountyCode(), config.getCityName(), webAPIKeyIs)).thenReturn(new JSONObject().put("dt", (new Date().getTime() / 1000))
+            when(newWeather.getTodayCurrentWeather(config.getCountyCode(), config.getCityName(), config.getKey())).thenReturn(new JSONObject().put("dt", (new Date().getTime() / 1000))
             );
         }
 
-        final JSONObject response = newWeather.getTodayCurrentWeather(config.getCountyCode(), config.getCityName(), webAPIKeyIs);
-        if (mock == 1) verify(newWeather).getTodayCurrentWeather(config.getCountyCode(), config.getCityName(), webAPIKeyIs);
+        final JSONObject response = newWeather.getTodayCurrentWeather(config.getCountyCode(), config.getCityName(), config.getKey());
+        if (mock == 1) verify(newWeather).getTodayCurrentWeather(config.getCountyCode(), config.getCityName(), config.getKey());
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -115,11 +120,11 @@ public class WeatherTests {
     @Test(timeout = 10000)
     public void isResponseWeatherOfThreeDays() throws IOException, JSONException {
         if (mock == 1) {
-            when(newWeather.getThreeDayWeatherForeCast(config.getCountyCode(), config.getCityName(), webAPIKeyIs)).thenReturn(new JSONArray().put(2).put(1).put(3));
+            when(newWeather.getThreeDayWeatherForeCast(config.getCountyCode(), config.getCityName(), config.getKey())).thenReturn(new JSONArray().put(2).put(1).put(3));
         }
 
-        final JSONArray response = newWeather.getThreeDayWeatherForeCast(config.getCountyCode(), config.getCityName(), webAPIKeyIs);
-        if (mock == 1) verify(newWeather).getThreeDayWeatherForeCast(config.getCountyCode(), config.getCityName(), webAPIKeyIs);
+        final JSONArray response = newWeather.getThreeDayWeatherForeCast(config.getCountyCode(), config.getCityName(), config.getKey());
+        if (mock == 1) verify(newWeather).getThreeDayWeatherForeCast(config.getCountyCode(), config.getCityName(), config.getKey());
 
         int forecastLength = response.length();
         writeLinestoFile(response.toString() + "\n");
@@ -132,11 +137,11 @@ public class WeatherTests {
     public void isResponseWithCoordinates() throws IOException, JSONException {
 
         if (mock == 1) {
-            when(newWeather.getCoordinatesOfCity(config.getCountyCode(), config.getCityName(), webAPIKeyIs)).thenReturn(new JSONObject().put("lat", 1).put("lon", 2));
+            when(newWeather.getCoordinatesOfCity(config.getCountyCode(), config.getCityName(), config.getKey())).thenReturn(new JSONObject().put("lat", 1).put("lon", 2));
         }
 
-        final JSONObject response = newWeather.getCoordinatesOfCity(config.getCountyCode(), config.getCityName(), webAPIKeyIs);
-        if (mock == 1) verify(newWeather).getCoordinatesOfCity(config.getCountyCode(), config.getCityName(), webAPIKeyIs);
+        final JSONObject response = newWeather.getCoordinatesOfCity(config.getCountyCode(), config.getCityName(), config.getKey());
+        if (mock == 1) verify(newWeather).getCoordinatesOfCity(config.getCountyCode(), config.getCityName(), config.getKey());
 
 
         Boolean latitude = response.has("lat");
@@ -150,11 +155,11 @@ public class WeatherTests {
     @Test(timeout = 10000)
     public void isResponseOfMaxTemperatures() throws IOException, JSONException {
         if (mock == 1) {
-            when(newWeather.getHighestandLowestTempForecast(forecastLength, config.getCountyCode(), config.getCityName(), webAPIKeyIs)).thenReturn(new JSONArray().put(new JSONObject().put("maxTemp", 1).put("minTemp", 2)));
+            when(newWeather.getHighestandLowestTempForecast(forecastLength, config.getCountyCode(), config.getCityName(), config.getKey())).thenReturn(new JSONArray().put(new JSONObject().put("maxTemp", 1).put("minTemp", 2)));
         }
 
-        final JSONArray response = newWeather.getHighestandLowestTempForecast(forecastLength, config.getCountyCode(), config.getCityName(), webAPIKeyIs);
-        if (mock == 1) verify(newWeather).getHighestandLowestTempForecast(forecastLength, config.getCountyCode(), config.getCityName(), webAPIKeyIs);
+        final JSONArray response = newWeather.getHighestandLowestTempForecast(forecastLength, config.getCountyCode(), config.getCityName(), config.getKey());
+        if (mock == 1) verify(newWeather).getHighestandLowestTempForecast(forecastLength, config.getCountyCode(), config.getCityName(), config.getKey());
 
 
         int temperatureCount = 0;
@@ -165,6 +170,19 @@ public class WeatherTests {
         }
         writeLinestoFile(response.toString() + "\n");
         assertEquals(response.length(), temperatureCount);
+    }
+
+    @Test
+    public void doesFileReaderCompilesExpectedRequestTest() throws IOException {
+        WeatherRequest expectedRequest = new WeatherRequest("Tallinn", "EE", "555555555");
+        if (mock == 1) {
+            when(writer.readAllLines("/Users/macbook/Desktop/automaat/src/main/java/textFiles/input.txt"))
+                    .thenReturn(new JSONArray().put(0, "Tallinn").put(1, "EE").put(2, "555555555"));
+        }
+        System.out.println(writer.readAllLines("/Users/macbook/Desktop/automaat/src/main/java/textFiles/input.txt").get(0).toString());
+        WeatherRequest request = new WeatherRequest(writer.readAllLines("/Users/macbook/Desktop/automaat/src/main/java/textFiles/input.txt").get(0).toString(), writer.readAllLines("/Users/macbook/Desktop/automaat/src/main/java/textFiles/input.txt").get(1).toString(), writer.readAllLines("/Users/macbook/Desktop/automaat/src/main/java/textFiles/input.txt").get(1).toString());
+        assertEquals(expectedRequest.cityName, request.cityName);
+
     }
 
 }

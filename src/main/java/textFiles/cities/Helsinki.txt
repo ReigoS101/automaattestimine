@@ -6,3 +6,107 @@ cityName='Helsinki'
 , threeDayTemp=[{"min_temp":277.79,"max_temp":278.149,"dateUnix":1512788400},{"min_temp":277.79,"max_temp":278.149,"dateUnix":1512788400},{"min_temp":277.79,"max_temp":278.149,"dateUnix":1512788400}]
 }
  
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='275.15'
+, threeDayTemp=[{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='275.15'
+, threeDayTemp=[{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='275.15'
+, threeDayTemp=[{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='275.15'
+, threeDayTemp=[{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='275.15'
+, threeDayTemp=[{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='275.15'
+, threeDayTemp=[{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FsI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='275.15'
+, threeDayTemp=[{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200},{"min_temp":276.36,"max_temp":276.934,"dateUnix":1513447200}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='275.15'
+, threeDayTemp=[{"min_temp":276.53,"max_temp":276.817,"dateUnix":1513458000},{"min_temp":276.53,"max_temp":276.817,"dateUnix":1513458000},{"min_temp":276.53,"max_temp":276.817,"dateUnix":1513458000}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='273.15'
+, threeDayTemp=[{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600},{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600},{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='273.15'
+, threeDayTemp=[{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600},{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600},{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='273.15'
+, threeDayTemp=[{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600},{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600},{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FaI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='273.15'
+, threeDayTemp=[{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600},{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600},{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600}]
+}
+ 
+WeatherReport{ 
+cityName='Helsinki'
+, countryCode='FI'
+, geoCoordinates={"lon":24.94,"lat":60.17}
+, currentTemp='273.15'
+, threeDayTemp=[{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600},{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600},{"min_temp":272.1,"max_temp":272.436,"dateUnix":1513533600}]
+}
+ 

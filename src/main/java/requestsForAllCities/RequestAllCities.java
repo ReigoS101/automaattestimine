@@ -14,7 +14,8 @@ public class RequestAllCities {
 
     public static void requestWeatherInfoForAll(String filePath) {
         Weather weather = new Weather();
-        JSONArray requestInfo = fileReaderWriter.readAllLines(filePath);
+        fileReaderWriter writer = new fileReaderWriter();
+        JSONArray requestInfo = writer.readAllLines(filePath);
         for(int i = 0; i < requestInfo.length(); i++) {
             String [] split = requestInfo.get(i).toString().split(",");
             String cityName = split[0].trim();
@@ -25,7 +26,7 @@ public class RequestAllCities {
                 JSONArray foreCastResponse = weather.getThreeDayWeatherForeCast(countyCode, cityName, key);
                 System.out.println(foreCastResponse);
                 try {
-                    String fileName = "/Users/macbook/Desktop/automaat/src/main/java/textFiles/cities/" + cityName +".txt"; //Muuda ära
+                    String fileName = "/Users/macbook/Desktop/automaat/src/main/java/textFiles/cities/" + cityName +".txt";
                     File file = new File(fileName);
                     file.createNewFile();
                     Double currentTemp = currentWeatherResponse.getJSONObject("main").getDouble("temp");

@@ -39,7 +39,7 @@ public class fileReaderWriter {
         Files.write(Paths.get(outputFileAbsPath), msg.getBytes(), StandardOpenOption.APPEND);
     }
 
-    public static JSONArray readAllLines(String inputFileAbsPath) {
+    public JSONArray readAllLines(String inputFileAbsPath) {
         List<String> inputList = new ArrayList<>();
         JSONArray fileContentInAnArray = new JSONArray();
 
